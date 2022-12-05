@@ -4,9 +4,8 @@ import platform
 from bleak import BleakClient
 from bleak.backends.characteristic import BleakGATTCharacteristic
 import numpy as np
-from time import time, sleep
-from pylsl import StreamInfo, StreamOutlet, local_clock
-import bitstring
+from time import time
+from pylsl import StreamInfo, StreamOutlet
 
 DEVICE_NAME = "getBrain_nRF52_NCS_1"
 SAMPLE_BYTE_NUMBER = 26
