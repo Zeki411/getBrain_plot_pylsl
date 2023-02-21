@@ -25,11 +25,19 @@ ADDRESS = (
 
 last_tm = 0
 info = info = StreamInfo('getBrain', 'EEG', 8, 250, 'float32', 'getBrain%s' % ADDRESS)
+# info = info = StreamInfo('getBrain', 'EEG', 4, 250, 'float32', 'getBrain%s' % ADDRESS)
 
 info.desc().append_child_value("manufacturer", "getBrain")
 channels = info.desc().append_child("channels")
 
-for c in ['POz', 'Oz', 'O1', 'O2', 'TP9', 'TP10', 'AF9', 'AF10']:
+# for c in ['POz', 'Oz', 'O1', 'O2', 'TP9', 'TP10', 'AF9', 'AF10']:
+#     channels.append_child("channel") \
+#         .append_child_value("label", c) \
+#         .append_child_value("unit", "microvolts") \
+#         .append_child_value("type", "EEG")
+# outlet = StreamOutlet(info, 1, 360)
+
+for c in ['L1', 'L2', 'R1', 'R2']:
     channels.append_child("channel") \
         .append_child_value("label", c) \
         .append_child_value("unit", "microvolts") \
