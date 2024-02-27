@@ -1,0 +1,8 @@
+bleak
+pylsl
+numpy
+vispy
+seaborn
+scipy
+mne
+PyQt5
